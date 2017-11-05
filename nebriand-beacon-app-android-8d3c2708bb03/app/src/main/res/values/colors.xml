@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#2c2c2e</color>
+    <color name="Actionbar_bac">#f7931e</color>
+    <color name="darkgray">#4c4c4f</color>
+    <color name="red">#9c7402</color>
+    <color name="mickymosecolor">#74e9a3</color>
+    <color name="tabunselect">#ddd</color>
+
+</resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/Deals"
+            android:checked="false"
+            android:title="Deals" />
+
+        <item
+            android:id="@+id/Shops"
+            android:checked="false"
+            android:title="Shops"  />
+
+        <item
+            android:id="@+id/The_Mall"
+            android:checked="false"
+            android:title="The Mall"/>
+
+        <item
+            android:id="@+id/News_Events"
+            android:checked="false"
+            android:title="News,Events &amp; Safety" />
+
+
+        <item
+            android:id="@+id/Notification"
+            android:checked="false"
+           android:title="Notification" />
+        <item
+            android:id="@+id/Rate"
+            android:checked="false"
+             android:title="Rate this app" />
+        <item
+            android:id="@+id/Share_app"
+            android:checked="false"
+            android:title="Share app with friends" />
+
+    </group>
+</menu>

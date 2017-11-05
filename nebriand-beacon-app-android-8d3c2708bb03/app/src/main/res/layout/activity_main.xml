@@ -1,0 +1,218 @@
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:id="@+id/toollinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <android.support.v7.widget.Toolbar
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?android:attr/actionBarSize"
+            android:background="@color/white"
+            android:elevation="4dp"
+            android:id="@+id/toolBar"
+            android:fitsSystemWindows="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deals"
+                android:textSize="48px"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:id="@+id/toolbar_title"/>
+        </android.support.v7.widget.Toolbar>
+    </LinearLayout>
+
+
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/toollinear"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        >
+
+
+
+     <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+        <!-- <com.appadia.beacon.Libraries.SlidingTabLayout
+             android:id="@+id/tabs"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:elevation="2dp"
+             android:background="#59c" />-->
+
+         <android.support.design.widget.TabLayout
+             android:id="@+id/tab_layout"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:background="@color/white"
+              android:elevation="6dp"
+             android:minHeight="?attr/actionBarSize"
+             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+             />
+
+
+
+               <!--<RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+
+                android:orientation="horizontal">
+           &lt;!&ndash; <com.appadia.beacon.Libraries.SegmentedGroup
+                android:id="@+id/sg_Roomtype"
+                android:layout_width="match_parent"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                segmentedgroup:sc_tint_color="@color/red"
+                segmentedgroup:sc_checked_text_color="@color/white"
+                segmentedgroup:sc_corner_radius="10dp"
+               >
+
+
+                <RadioButton
+                    android:id="@+id/rbtn_EntireApar"
+                    style="@style/RadioButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="All Deals"
+                    android:checked="true" />
+                <RadioButton
+                    android:id="@+id/rbtn_PrivateRme"
+                    style="@style/RadioButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="My Deals"
+                    android:checked="false" />
+
+
+            </com.appadia.beacon.Libraries.SegmentedGroup>&ndash;&gt;
+                  &lt;!&ndash;  <View
+                        android:id="@+id/viewdivide"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dip"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/red"
+                        />&ndash;&gt;
+                </RelativeLayout>-->
+
+            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/MainCointainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+                    <LinearLayout
+                        android:id="@+id/containerViewone"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="2"
+                        android:orientation="vertical"
+
+                        >
+
+                        <android.support.v4.view.ViewPager
+                            android:id="@+id/pager"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:background="#fff"
+                            />
+                    </LinearLayout>
+                  <LinearLayout
+                        android:id="@+id/containerViewtwo"
+                        android:layout_width="0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="2"
+                        android:orientation="vertical"
+                      android:visibility="gone"
+                        >
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/containerthree"
+                        android:layout_width="0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="2"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        >
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/containerviewfour"
+                        android:layout_width="0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="2"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        >
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/navigation_view"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:background="@mipmap/splash"
+            android:layout_gravity="start"
+            app:menu="@menu/drawer"/>
+
+
+       <!-- <android.support.v7.widget.RecyclerView
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:id="@+id/recyclerView"
+            android:scrollbars="vertical"
+            android:choiceMode="singleChoice"
+            android:dividerHeight="0.5dp"
+            android:listSelector="@drawable/list_selector"
+            android:background="@color/list_background"
+            android:divider="@color/black"
+            android:layout_gravity="left"
+            />-->
+        <!--  <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              >
+
+
+
+
+
+
+
+
+
+          &lt;!&ndash; android:layout_marginTop="?android:attr/actionBarSize"&ndash;&gt;
+
+          </RelativeLayout>-->
+    </android.support.v4.widget.DrawerLayout>
+</RelativeLayout>
